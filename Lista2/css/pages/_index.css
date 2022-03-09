@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap");
+.main-image-wrapper {
+  margin-top: -140px;
+  width: 100%;
+}
+.main-image-wrapper img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.info-wrapper div:nth-child(3), .info-wrapper div:nth-child(2), .info-wrapper div:nth-child(1) {
+  width: 280px;
+  height: 180px;
+  text-align: center;
+  position: relative;
+  background-color: #1e93ee;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+.info-wrapper div:nth-child(3) h3, .info-wrapper div:nth-child(2) h3, .info-wrapper div:nth-child(1) h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #fefefe;
+}
+.info-wrapper div:nth-child(3) p, .info-wrapper div:nth-child(2) p, .info-wrapper div:nth-child(1) p {
+  margin: 20px;
+  color: #fafafa;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 300px;
+}
+.info-wrapper div:nth-child(1) {
+  top: 10px;
+}
+.info-wrapper div:nth-child(2) {
+  top: 50px;
+}
+.info-wrapper div:nth-child(3) {
+  top: 90px;
+}
+
+.content {
+  margin: 40px 80px;
+}
+.content h2 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+.content p {
+  margin-left: 0.8rem;
+}
+
+/*# sourceMappingURL=_index.css.map */

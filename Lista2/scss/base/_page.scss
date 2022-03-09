@@ -1,0 +1,16 @@
+@import '_typography';
+@import '../base/colours';
+
+html {
+	height: 100%;
+	background: $white;
+}
+
+body {
+	font-family: $lato-font;
+	height: 100%;
+}
+
+main {
+	padding-top: 140px;
+}

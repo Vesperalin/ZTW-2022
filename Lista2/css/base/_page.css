@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap");
+html {
+  height: 100%;
+  background: #fefefe;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100%;
+}
+
+main {
+  padding-top: 140px;
+}
+
+/*# sourceMappingURL=_page.css.map */

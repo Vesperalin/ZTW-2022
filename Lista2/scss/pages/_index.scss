@@ -1,0 +1,67 @@
+@import '../base/_typography';
+@import '../base/colours';
+
+.main-image-wrapper {
+	margin-top: -140px;
+	width: 100%;
+
+	img {
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+%info-box {
+	width: 280px;
+	height: 180px;
+	text-align: center;
+	position: relative;
+	background-color: $blue;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+
+	h3 {
+		font-size: 1.5rem;
+		margin: 15px 0;
+		color: $white;
+	}
+
+	p {
+		margin: 20px;
+		color: #fafafa;
+	}
+}
+
+.info-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	height: 300px;
+
+	& div:nth-child(1) {
+		@extend %info-box;
+		top: 10px;
+	}
+
+	& div:nth-child(2) {
+		@extend %info-box;
+		top: 50px;
+	}
+
+	& div:nth-child(3) {
+		@extend %info-box;
+		top: 90px;
+	}
+}
+
+.content {
+	margin: 40px 80px;
+
+	h2 {
+		font-size: 1.8rem;
+		margin: 15px 0;
+	}
+
+	p {
+		margin-left: 0.8rem;
+	}
+}
