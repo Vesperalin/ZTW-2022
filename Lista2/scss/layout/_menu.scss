@@ -1,90 +1,90 @@
-@import '../base/_typography';
-@import '../base/colours';
+@import "../base/_typography";
+@import "../base/colours";
 
 header {
-	width: 100%;
-	background-color: rgba(47, 164, 255, 0.8);
-	display: flex;
-	padding: 30px;
-	justify-content: space-between;
-	align-items: center;
+  width: 100%;
+  background-color: rgba(47, 164, 255, 0.8);
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-	color: $white;
-	font-weight: bold;
-	font-family: $poppins-font;
-	font-size: $header-size;
+  color: $white;
+  font-weight: bold;
+  font-family: $poppins-font;
+  font-size: $header-size;
 }
 
 .menu {
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 .burger {
-	margin: auto 0;
-	z-index: 2;
-	position: relative;
-	cursor: pointer;
+  margin: auto 0;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
 
-	span {
-		display: block;
-		width: 30px;
-		height: 2px;
-		background-color: $white;
-		margin: 6px 0;
-		transition: all ease-in 0.3s;
-	}
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+    margin: 6px 0;
+    transition: all ease-in 0.3s;
+  }
 }
 
 nav {
-	position: absolute;
-	top: 0;
-	width: 250px;
-	height: 100%;
-	background-color: #222;
-	padding-left: 30px;
-	left: -250px;
-	transition: left ease-in 0.2s;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: $black;
+  padding-left: 30px;
+  left: -250px;
+  transition: left ease-in 0.2s;
 
-	ul {
-		margin-top: 100px;
+  ul {
+    margin-top: 100px;
 
-		li {
-			margin: 20px 0;
+    li {
+      margin: 20px 0;
 
-			a,
-			a:visited {
-				font-size: $link-text-size;
-				color: #eee;
+      a,
+      a:visited {
+        font-size: $link-text-size;
+        color: $invert_black;
 
-				&:hover,
-				&:active {
-					color: #aaa;
-				}
-			}
-		}
-	}
+        &:hover,
+        &:active {
+          color: $gray;
+        }
+      }
+    }
+  }
 }
 
 .burger.cross {
-	span:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
+  span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-	span:nth-child(2) {
-		opacity: 0;
-		width: 0;
-	}
+  span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
 
-	span:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
+  span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 nav.show {
-	left: 0;
+  left: 0;
 }

@@ -1,2 +1,5 @@
 $white: #fefefe;
 $blue: #1e93ee;
+$black: #222;
+$invert_black: invert($black);
+$gray: lighten($black, 40);
