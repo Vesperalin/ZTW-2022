@@ -3,7 +3,7 @@ Wykorzystując technologię Bootstrap ora Material Design należy rozwinąć prz
 Sekcję z formularzem kontaktowym, (Monika)
 Sekcję z Google Maps, (Monika)
 Sekcję z tekstem i zdjęciem w stosunku 1 do 3, (Monika)
-Sekcję z cytatem,
+Sekcję z cytatem, (Monika)
 Sekcję z listą pracowników z wykorzystaniem Multi-item carousel, (wycofane, wymaga płatnej licencji) (tego nie robimy, bo płatne)
 Sekcję z kontrolką Carousel, (na wyższą ocenę połączyć z kontrolkami Cards, wyświetlającymi listę pracowników) (Monika)
 Sekcję FAQ z wykorzystaniem kontrolki Accordion, (Monika)
