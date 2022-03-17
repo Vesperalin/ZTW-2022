@@ -24,6 +24,9 @@
 		/>
 		<!-- MDB -->
 		<link rel="stylesheet" href="css/mdb.min.css" />
+		<!--AOS-->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="src/css/assistant.css" />
 	</head>
 
 	<body>
@@ -80,11 +83,40 @@
 			</div>
 		</section>
 
+		<div class="assistant-wrapper">
+			<div class="assistant-content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+					veniam eaque,
+				</p>
+				<p>Lorem ipsum dolor sit</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+					veniam
+				</p>
+			</div>
+
+			<div class="assistant-button">
+				<img
+					class="card-img-top"
+					src="img/assistant.png"
+					alt="Card image cap"
+				/>
+			</div>
+		</div>
+
 		<section>
 			<div class="text-center m-3">
 				<div class="row justify-content-center align-items-center">
 					<div class="col-md-6">
-						<img src="img/proteza.jpg" class="img-fluid shadow-2-strong" />
+						<img
+							src="img/proteza.jpg"
+							class="img-fluid shadow-2-strong"
+							data-aos="fade-up"
+							data-aos-easing="linear"
+							data-aos-duration="1000"
+							data-aos-once="true"
+						/>
 					</div>
 					<div class="col-md-2">
 						<p>
@@ -99,7 +131,12 @@
 			</div>
 		</section>
 
-		<section>
+		<section
+			data-aos="fade-up"
+			data-aos-easing="linear"
+			data-aos-duration="1000"
+			data-aos-once="true"
+		>
 			<div class="container my-5">
 				<div
 					id="carouselExampleIndicators"
@@ -311,7 +348,12 @@
 			</div>
 		</section>
 
-		<section>
+		<section
+			data-aos="fade-up"
+			data-aos-easing="linear"
+			data-aos-duration="1000"
+			data-aos-once="true"
+		>
 			<div
 				class="accordion accordion-flush w-75 mx-auto p-3 m-3 border rounded-3"
 				id="accordionFlushExample"
@@ -444,11 +486,20 @@
 		<section
 			class="container mw-75 mh-75"
 			style="margin-top: 60px; margin-bottom: 60px"
+			data-aos="fade-up"
+			data-aos-easing="linear"
+			data-aos-duration="1000"
+			data-aos-once="true"
 		>
 			<canvas id="bar-chart"></canvas>
 		</section>
 
-		<section>
+		<section
+			data-aos="fade-up"
+			data-aos-easing="linear"
+			data-aos-duration="1000"
+			data-aos-once="true"
+		>
 			<div class="row justify-content-center align-items-center m-5">
 				<div class="col-md-4">
 					<div
@@ -546,5 +597,11 @@
 		<script type="text/javascript" src="js/mdb.min.js"></script>
 		<!-- Custom scripts -->
 		<script type="text/javascript" src="src/js/chart.js"></script>
+		<script type="text/javascript" src="src/js/assistant.js"></script>
+		<!--AOS-->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>
