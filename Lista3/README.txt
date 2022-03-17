@@ -19,3 +19,8 @@ https://mdbootstrap.com/docs/standard/
 
 Contact:
 office@mdbootstrap.com
+
+
+TODO
+- poprawić wielkość wykresu
+- poprawić wielkość mapy
