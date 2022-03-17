@@ -27,6 +27,7 @@
 		<!--AOS-->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="src/css/assistant.css" />
+		<link rel="stylesheet" href="src/css/social.css" />
 	</head>
 
 	<body>
@@ -65,6 +66,9 @@
 								<a class="nav-link" href="#faq">FAQ</a>
 							</li>
 							<li class="nav-item">
+								<a class="nav-link" href="#findus">Znajdź nas</a>
+							</li>
+							<li class="nav-item">
 								<a class="nav-link" href="#stats">Statystyki</a>
 							</li>
 							<li class="nav-item">
@@ -94,15 +98,10 @@
 
 		<div class="assistant-wrapper">
 			<div class="assistant-content">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-					veniam eaque,
-				</p>
+				<p>Lorem ipsum dolor sit amet consectetur .</p>
 				<p>Lorem ipsum dolor sit</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-					veniam
-				</p>
+				<p>Amet consectetur adipisicing elit. Doloremque veniam</p>
+				<input />
 			</div>
 
 			<div class="assistant-button">
@@ -490,20 +489,51 @@
 							lekarzem i gabinetem stomatologicznym.
 						</div>
 					</div>
-					<section id="stats"></section>
+					<section id="findus"></section>
 				</div>
 			</div>
 		</section>
 
 		<section
-			class="container mw-75 mh-75"
+			data-aos="fade-up"
+			data-aos-easing="linear"
+			data-aos-duration="1000"
+			data-aos-once="true"
+		>
+			<div class="social-wrapper">
+				<div class="social-button">
+					<div class="icon">
+						<i class="fab fa-facebook-f"></i>
+					</div>
+					<span>Facebook</span>
+				</div>
+				<div class="social-button">
+					<div class="icon">
+						<i class="fab fa-twitter"></i>
+					</div>
+					<span>Twitter</span>
+				</div>
+				<div class="social-button">
+					<div class="icon">
+						<i class="fab fa-instagram"></i>
+					</div>
+					<span>Instagram</span>
+				</div>
+			</div>
+			<section id="stats"></section>
+		</section>
+
+		<section
+			class="container text-center"
 			style="margin-top: 60px; margin-bottom: 60px"
 			data-aos="fade-up"
 			data-aos-easing="linear"
 			data-aos-duration="1000"
 			data-aos-once="true"
 		>
-			<canvas id="bar-chart"></canvas>
+			<div class="container">
+				<canvas id="bar-chart"></canvas>
+			</div>
 		</section>
 
 		<section
@@ -513,7 +543,7 @@
 			data-aos-once="true"
 			id="contact"
 		>
-			<div class="row justify-content-center align-items-center m-5">
+			<div class="row justify-content-center align-items-center m-4">
 				<div class="col-md-4">
 					<div
 						class="container-xl text-center p-3 border rounded bg-primary bg-opacity-10 hover-shadow"
@@ -585,6 +615,7 @@
 						</form>
 					</div>
 				</div>
+
 				<div class="col-md-4">
 					<p
 						class="h3 text-center border rounded bg-primary bg-opacity-10 p-2 m-3"
