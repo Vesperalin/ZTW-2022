@@ -21,6 +21,6 @@ Contact:
 office@mdbootstrap.com
 
 
-TODO
+ZROBIONE:
 - poprawić wielkość wykresu
 - poprawić wielkość mapy
