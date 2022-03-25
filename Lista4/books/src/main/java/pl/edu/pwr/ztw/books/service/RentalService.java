@@ -50,9 +50,10 @@ public class RentalService implements IRentalService {
                         return;
                     }
                 });
+                return true;
             }
         }
-        return true;
+        else return false;
     }
 
     @Override

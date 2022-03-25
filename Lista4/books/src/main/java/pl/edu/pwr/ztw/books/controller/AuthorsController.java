@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pwr.ztw.books.model.Author;
 import pl.edu.pwr.ztw.books.service.IAuthorService;
-import pl.edu.pwr.ztw.books.validators.AuthorValidator;
+import pl.edu.pwr.ztw.books.validators.HumanValidator;
 
 @RestController
 public class AuthorsController {
@@ -20,12 +20,16 @@ public class AuthorsController {
 
     @RequestMapping(value = "/get/author/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> getAuthor(@PathVariable("id") int id) {
-        return new ResponseEntity<>(authorsService.getAuthor(id), HttpStatus.OK);
+        Author foundAuthor = authorsService.getAuthor(id);
+        if (foundAuthor != null)
+            return new ResponseEntity<>(foundAuthor, HttpStatus.OK);
+        else
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value = "/create/author", method = RequestMethod.POST)
-    public ResponseEntity<Object> addAuthor(String firstName, String lastName) {
-        boolean isValid = AuthorValidator.isValid(firstName.strip(), lastName.strip());
+    public ResponseEntity<Object> addAuthor(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
+        boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
         if (isValid) {
             authorsService.createAuthor(firstName, lastName);
             return new ResponseEntity<>("Author is created successfully", HttpStatus.CREATED);
@@ -34,8 +38,8 @@ public class AuthorsController {
     }
 
     @RequestMapping(value = "/update/author/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Object> updateAuthor(@PathVariable("id") int id, String firstName, String lastName) {
-        boolean isValid = AuthorValidator.isValid(firstName.strip(), lastName.strip());
+    public ResponseEntity<Object> updateAuthor(@PathVariable("id") int id, @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
+        boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
         if (isValid) {
             Author updatedAuthor = authorsService.updateAuthor(id, firstName, lastName);
             if (updatedAuthor != null)

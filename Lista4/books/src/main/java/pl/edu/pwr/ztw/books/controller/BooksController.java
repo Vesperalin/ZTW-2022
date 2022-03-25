@@ -3,10 +3,7 @@ package pl.edu.pwr.ztw.books.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.edu.pwr.ztw.books.model.Book;
 import pl.edu.pwr.ztw.books.service.IBooksService;
 import pl.edu.pwr.ztw.books.validators.BookValidator;
@@ -23,11 +20,15 @@ public class BooksController {
 
     @RequestMapping(value = "/get/book/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> getBook(@PathVariable("id") int id) {
-        return new ResponseEntity<>(booksService.getBook(id), HttpStatus.OK);
+        Book foundBook = booksService.getBook(id);
+        if (foundBook != null)
+            return new ResponseEntity<>(foundBook, HttpStatus.OK);
+        else
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value = "/create/book", method = RequestMethod.POST)
-    public ResponseEntity<Object> createBook(String title, int authorId, int pages) {
+    public ResponseEntity<Object> createBook(@RequestParam("title") String title, @RequestParam("authorId") int authorId, @RequestParam("pages") int pages) {
         boolean isValid = BookValidator.isValid(pages, title, authorId);
         if (isValid) {
             boolean isCreated = booksService.createBook(title, authorId, pages);
@@ -40,7 +41,7 @@ public class BooksController {
     }
 
     @RequestMapping(value = "/update/book/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Object> updateBook(@PathVariable("id") int id, String title, int authorId, int pages) {
+    public ResponseEntity<Object> updateBook(@PathVariable("id") int id, @RequestParam("title") String title, @RequestParam("authorId") int authorId, @RequestParam("pages") int pages) {
         boolean isValid = BookValidator.isValid(pages, title, authorId);
         if (isValid) {
             Book updatedBook = booksService.updateBook(id, title, authorId, pages);
