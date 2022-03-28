@@ -13,11 +13,13 @@ public class ReaderController {
     @Autowired
     IReaderService readerService;
 
+    @CrossOrigin
     @RequestMapping(value = "/get/readers", method = RequestMethod.GET)
     public ResponseEntity<Object> getReaders() {
         return new ResponseEntity<>(readerService.getReaders(), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/get/reader/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> getReader(@PathVariable("id") int id) {
         Reader foundReader = readerService.getReader(id);
@@ -27,6 +29,7 @@ public class ReaderController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/create/reader", method = RequestMethod.POST)
     public ResponseEntity<Object> addReader(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
         boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
@@ -37,6 +40,7 @@ public class ReaderController {
             return new ResponseEntity<>("Invalid reader data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/update/reader/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateReader(@PathVariable("id") int id, @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
         boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
@@ -49,6 +53,7 @@ public class ReaderController {
             return new ResponseEntity<>("Invalid reader data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/delete/reader/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> deleteReader(@PathVariable("id") int id) {
         boolean isReaderDeleted = readerService.deleteReader(id);

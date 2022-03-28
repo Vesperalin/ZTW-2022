@@ -13,11 +13,13 @@ public class BooksController {
     @Autowired
     IBooksService booksService;
 
+    @CrossOrigin
     @RequestMapping(value = "/get/books", method = RequestMethod.GET)
     public ResponseEntity<Object> getBooks() {
         return new ResponseEntity<>(booksService.getBooks(), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/get/book/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> getBook(@PathVariable("id") int id) {
         Book foundBook = booksService.getBook(id);
@@ -27,6 +29,7 @@ public class BooksController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/create/book", method = RequestMethod.POST)
     public ResponseEntity<Object> createBook(@RequestParam("title") String title, @RequestParam("authorId") int authorId, @RequestParam("pages") int pages) {
         boolean isValid = BookValidator.isValid(pages, title, authorId);
@@ -40,6 +43,7 @@ public class BooksController {
             return new ResponseEntity<>("Invalid book data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/update/book/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateBook(@PathVariable("id") int id, @RequestParam("title") String title, @RequestParam("authorId") int authorId, @RequestParam("pages") int pages) {
         boolean isValid = BookValidator.isValid(pages, title, authorId);
@@ -52,6 +56,7 @@ public class BooksController {
             return new ResponseEntity<>("Invalid book data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/delete/book/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> deleteBook(@PathVariable("id") int id) {
         boolean isBookDeleted = booksService.deleteBook(id);

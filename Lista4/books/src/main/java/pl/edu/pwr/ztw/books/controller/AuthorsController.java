@@ -13,11 +13,13 @@ public class AuthorsController {
     @Autowired
     IAuthorService authorsService;
 
+    @CrossOrigin
     @RequestMapping(value = "/get/authors", method = RequestMethod.GET)
     public ResponseEntity<Object> getAuthors() {
         return new ResponseEntity<>(authorsService.getAuthors(), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/get/author/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> getAuthor(@PathVariable("id") int id) {
         Author foundAuthor = authorsService.getAuthor(id);
@@ -27,6 +29,7 @@ public class AuthorsController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/create/author", method = RequestMethod.POST)
     public ResponseEntity<Object> addAuthor(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
         boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
@@ -37,6 +40,7 @@ public class AuthorsController {
             return new ResponseEntity<>("Invalid author data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/update/author/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateAuthor(@PathVariable("id") int id, @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
         boolean isValid = HumanValidator.isValid(firstName.strip(), lastName.strip());
@@ -49,6 +53,7 @@ public class AuthorsController {
             return new ResponseEntity<>("Invalid author data", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/delete/author/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> deleteAuthor(@PathVariable("id") int id) {
         boolean isAuthorDeleted = authorsService.deleteAuthor(id);
