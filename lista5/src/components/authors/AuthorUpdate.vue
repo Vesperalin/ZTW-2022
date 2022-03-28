@@ -21,7 +21,7 @@
 					@focus="clearStatus"
 					@keypress="clearStatus"
 				/>
-				<button>Edit book</button>
+				<button>Edit author</button>
 			</form>
 			<p v-if="error && submitting" class="error-message">
 				Please fill the form

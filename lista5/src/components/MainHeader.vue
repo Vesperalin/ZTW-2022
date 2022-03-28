@@ -33,12 +33,15 @@ header {
 
 .title {
 	color: #f7f7f7;
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	text-decoration: none;
+	padding-left: 50px;
+	font-weight: 800;
 }
 
 nav {
 	display: flex;
+	padding-right: 50px;
 }
 
 .navbar a {

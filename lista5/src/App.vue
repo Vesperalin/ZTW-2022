@@ -1,8 +1,7 @@
 <template>
 	<div class="main-component">
 		<main-header />
-		<div class="filler"></div>
-		<router-view />
+		<div class="wrapper"><router-view /></div>
 	</div>
 </template>
 
@@ -28,12 +27,14 @@ export default {
 .main-component {
 	font-family: 'Lato', sans-serif;
 	background-color: #f7f3ee;
-	min-height: calc(100vh - 70px);
+	min-height: 100vh;
 	width: 100%;
 }
 
-.filler {
-	margin-top: 70px;
+.wrapper {
+	padding-top: 200px;
+	display: flex;
+	justify-content: center;
 }
 
 .error-message {
