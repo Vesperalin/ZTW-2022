@@ -28,7 +28,7 @@
 					</option>
 				</select>
 
-				<button>Add author</button>
+				<button>Add book</button>
 				<p v-if="error && submitting" class="error-message">
 					Please fill the form
 				</p>

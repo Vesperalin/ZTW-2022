@@ -101,7 +101,6 @@ export default {
 						});
 					}
 				}
-				console.log(this.mergedRentals);
 			});
 		},
 		async returnBook(bookId) {

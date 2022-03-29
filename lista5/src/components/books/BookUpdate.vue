@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Add book</h1>
+		<h1>Edit book</h1>
 		<div>
 			<form @submit.prevent="updateBook">
 				<label>Title</label>
@@ -27,7 +27,7 @@
 						{{ author.firstName + ' ' + author.lastName }}
 					</option>
 				</select>
-				<button>Add author</button>
+				<button>Edit book</button>
 				<p v-if="error && submitting" class="error-message">
 					Please fill the form
 				</p>

@@ -38,7 +38,6 @@ export default {
 	},
 	methods: {
 		async getRentals() {
-			console.log(this.$route.params.id);
 			Promise.all([
 				fetch('http://localhost:8080/rentals/' + this.$route.params.id)
 					.then(res => (res.ok && res.json()) || Promise.reject(res))

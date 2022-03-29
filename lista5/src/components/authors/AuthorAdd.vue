@@ -21,7 +21,7 @@
 					@focus="clearStatus"
 					@keypress="clearStatus"
 				/>
-				<button>Add author</button>
+				<button>Add book</button>
 				<p v-if="error && submitting" class="error-message">
 					Please fill the form
 				</p>
@@ -92,3 +92,19 @@ export default {
 	},
 };
 </script>
+
+<style scoped>
+form {
+	max-width: 500px;
+	padding: 10px 20px;
+	background-color: #e6e2dd;
+	margin: 10px auto;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+input {
+	display: block;
+	margin-bottom: 8px;
+}
+</style>
