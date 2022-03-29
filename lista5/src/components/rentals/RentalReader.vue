@@ -10,70 +10,49 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="record in mergedBooksAndAuthors" :key="record.id">
+				<tr v-for="record in mergedRentals" :key="record.id">
 					<td>{{ record.title }}</td>
 					<td>{{ record.pages }}</td>
-					<td>{{ record.authorFirstName + ' ' + record.authorLastName }}</td>
+					<td>{{ record.author }}</td>
 					<td>
-						<button
-							@click="
-								$router.push({
-									name: 'book-update',
-									params: { id: record.id },
-								})
-							"
-						>
-							Edit
-						</button>
-						<button @click="deleteBook(record.id)">Delete</button>
-						<button
-							@click="
-								$router.push({
-									name: 'book-book',
-									params: { id: record.id },
-								})
-							"
-						>
-							Preview
-						</button>
+						<button @click="returnBook(record.bookId)">Return book</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<button
-			@click="
-				$router.push({
-					name: 'book-add',
-				})
-			"
-		>
-			Add Author
-		</button>
 		<p v-if="error" class="error-message">Couldn't load data from server</p>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'book-table',
+	name: 'rental-table',
 	data() {
 		return {
 			error: '',
-			books: [],
+			reader: {},
+			rentals: [],
 			authors: [],
-			mergedBooksAndAuthors: [],
+			mergedRentals: [],
 		};
 	},
 	methods: {
-		getAuthorsAndBooks() {
+		async getRentals() {
+			console.log(this.$route.params.id);
 			Promise.all([
-				fetch('http://localhost:8080/get/authors')
+				fetch('http://localhost:8080/rentals/' + this.$route.params.id)
 					.then(res => (res.ok && res.json()) || Promise.reject(res))
 					.catch(error => {
 						this.error = true;
 						console.error(error);
 					}),
-				fetch('http://localhost:8080/get/books')
+				fetch('http://localhost:8080/get/reader/' + this.$route.params.id)
+					.then(res => (res.ok && res.json()) || Promise.reject(res))
+					.catch(error => {
+						this.error = true;
+						console.error(error);
+					}),
+				fetch('http://localhost:8080/get/authors')
 					.then(res => (res.ok && res.json()) || Promise.reject(res))
 					.catch(error => {
 						this.error = true;
@@ -81,36 +60,31 @@ export default {
 					}),
 			]).then(data => {
 				this.error = false;
-				this.authors = data[0];
-				this.books = data[1];
+				this.rentals = data[0];
+				this.reader = data[1];
+				this.authors = data[2];
 
-				for (let i = 0; i < this.books.length; i++) {
+				for (let i = 0; i < this.rentals.length; i++) {
 					const author = this.authors.filter(
-						author => author.id === this.books[i].authorId,
+						author => author.id === this.rentals[i].authorId,
 					)[0];
-					this.mergedBooksAndAuthors.push({
-						id: this.books[i].id,
-						authorId: author.id,
-						title: this.books[i].title,
-						pages: this.books[i].pages,
-						authorFirstName: author.firstName,
-						authorLastName: author.lastName,
+					this.mergedRentals.push({
+						id: author.id + this.rentals[i].id,
+						bookId: this.rentals[i].id,
+						title: this.rentals[i].title,
+						pages: this.rentals[i].pages,
+						author: author.firstName + ' ' + author.lastName,
 					});
 				}
 			});
 		},
-		async deleteBook(bookID) {
-			fetch('http://localhost:8080/delete/book/' + bookID, {
-				method: 'DELETE',
+		async returnBook(bookId) {
+			fetch('http://localhost:8080/return-book/' + bookId, {
+				method: 'GET',
 			})
 				.then(() => {
-					this.mergedBooksAndAuthors = this.mergedBooksAndAuthors.filter(
-						book => {
-							return book.id != bookID;
-						},
-					);
-					this.books = this.books.filter(book => {
-						return book.id != bookID;
+					this.mergedRentals = this.mergedRentals.filter(rental => {
+						return rental.bookId != bookId;
 					});
 					this.error = false;
 				})
@@ -121,7 +95,7 @@ export default {
 		},
 	},
 	mounted() {
-		this.getAuthorsAndBooks();
+		this.getRentals();
 	},
 };
 </script>

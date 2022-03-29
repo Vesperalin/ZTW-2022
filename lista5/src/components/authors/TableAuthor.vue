@@ -80,8 +80,10 @@ export default {
 					this.authors = this.authors.filter(author => {
 						return author.id != authorId;
 					});
+					this.error = false;
 				})
 				.catch(error => {
+					this.error = true;
 					console.log(error);
 				});
 		},

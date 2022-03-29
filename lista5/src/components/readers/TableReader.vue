@@ -80,8 +80,10 @@ export default {
 					this.readers = this.readers.filter(reader => {
 						return reader.id != readerId;
 					});
+					this.error = false;
 				})
 				.catch(error => {
+					this.error = true;
 					console.log(error);
 				});
 		},

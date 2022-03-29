@@ -73,19 +73,14 @@ const routes = [
 		component: () => import('@/components/rentals/TableRental.vue'),
 	},
 	{
-		path: '/rentals/update/:id',
-		name: 'rental-update',
-		component: () => import('@/components/rentals/RentalUpdate.vue'),
+		path: '/rentals/reader/:id',
+		name: 'rental-of-reader',
+		component: () => import('@/components/rentals/RentalReader.vue'),
 	},
 	{
 		path: '/rentals/add',
 		name: 'rental-add',
 		component: () => import('@/components/rentals/RentalAdd.vue'),
-	},
-	{
-		path: '/rentals/rental/:id',
-		name: 'rental-rental',
-		component: () => import('@/components/rentals/RentalPreview.vue'),
 	},
 ];
 
