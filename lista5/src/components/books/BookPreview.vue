@@ -38,7 +38,7 @@ export default {
 				const book = await responseBook.json();
 
 				const responseAuthor = await fetch(
-					'http://localhost:8080/get/author/' + book.id,
+					'http://localhost:8080/get/author/' + book.authorId,
 					{ method: 'GET' },
 				);
 				const author = await responseAuthor.json();
