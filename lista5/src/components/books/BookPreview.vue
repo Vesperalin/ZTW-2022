@@ -27,7 +27,7 @@ export default {
 		};
 	},
 	methods: {
-		async getAuthor() {
+		async getBookAndAuthor() {
 			const bookId = this.$route.params.id;
 
 			try {
@@ -56,7 +56,7 @@ export default {
 		},
 	},
 	mounted() {
-		this.getAuthor();
+		this.getBookAndAuthor();
 	},
 };
 </script>
