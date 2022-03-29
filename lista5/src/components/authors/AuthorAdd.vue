@@ -21,9 +21,9 @@
 					@focus="clearStatus"
 					@keypress="clearStatus"
 				/>
-				<button>Add book</button>
+				<button class="button">Add author</button>
 				<p v-if="error && submitting" class="error-message">
-					Please fill the form
+					Please fill the form correctly
 				</p>
 				<p v-if="success" class="success-message">
 					Successfully added new author
@@ -41,7 +41,10 @@ export default {
 	name: 'author-form',
 	computed: {
 		invalidAuthor() {
-			return this.author.firstName === '' || this.author.lastName === '';
+			return (
+				this.author.firstName.trim() === '' ||
+				this.author.lastName.trim() === ''
+			);
 		},
 	},
 	data() {
@@ -94,7 +97,12 @@ export default {
 </script>
 
 <style scoped>
+div h1 {
+	text-align: center;
+}
+
 form {
+	min-width: 300px;
 	max-width: 500px;
 	padding: 10px 20px;
 	background-color: #e6e2dd;
@@ -124,5 +132,28 @@ select {
 	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 	margin-bottom: 30px;
+}
+
+select {
+	-webkit-appearance: menulist-button;
+	height: 35px;
+}
+
+.button {
+	display: block;
+	padding: 15px;
+	color: #fff;
+	margin: 0 auto;
+	background-color: #207744;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.button:hover {
+	background-color: #106633;
 }
 </style>

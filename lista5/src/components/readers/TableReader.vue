@@ -1,5 +1,6 @@
 <template>
 	<div class="table-wrapper">
+		<h1>Readers</h1>
 		<table>
 			<thead>
 				<tr>
@@ -99,6 +100,10 @@ export default {
 	text-align: center;
 }
 
+.table-wrapper h1 {
+	margin-bottom: 10px;
+}
+
 th {
 	font-size: 1.2rem;
 	padding-bottom: 10px;
@@ -128,7 +133,7 @@ td {
 button {
 	padding: 10px 15px;
 	margin: 0 5px;
-	background-color: #274c6b;
+	background-color: #dbcf26;
 	color: #f7f7f7;
 	border-radius: 10px;
 	font-size: 0.95rem;
@@ -136,6 +141,6 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: #163b5a;
+	background-color: #cabe15;
 }
 </style>

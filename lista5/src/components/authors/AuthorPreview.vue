@@ -1,12 +1,15 @@
 <template>
-	<div class="panel-wrapper">
-		<p class="title">First Name</p>
-		<p>{{ author.firstName }}</p>
-		<p class="title separator">Last Name</p>
-		<p>{{ author.lastName }}</p>
-		<p v-if="errorWithServer" class="error-message separator">
-			Couldn't load data from server
-		</p>
+	<div>
+		<h1>Preview</h1>
+		<div class="panel-wrapper">
+			<p class="title">First Name</p>
+			<p>{{ author.firstName }}</p>
+			<p class="title separator">Last Name</p>
+			<p>{{ author.lastName }}</p>
+			<p v-if="errorWithServer" class="error-message separator">
+				Couldn't load data from server
+			</p>
+		</div>
 	</div>
 </template>
 
@@ -47,7 +50,13 @@ export default {
 </script>
 
 <style scoped>
+div h1 {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
 .panel-wrapper {
+	min-width: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,6 +76,6 @@ export default {
 .title {
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: #274b6b;
+	color: #106633;
 }
 </style>

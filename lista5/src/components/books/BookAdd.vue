@@ -28,12 +28,12 @@
 					</option>
 				</select>
 
-				<button>Add book</button>
+				<button class="button">Add book</button>
 				<p v-if="error && submitting" class="error-message">
-					Please fill the form
+					Please fill the form correctly
 				</p>
 				<p v-if="success" class="success-message">
-					Successfully added new author
+					Successfully added new book
 				</p>
 				<p v-if="errorWithServer" class="error-message">
 					Couldn't load data from server
@@ -49,7 +49,7 @@ export default {
 	computed: {
 		invalidBook() {
 			return (
-				this.book.title === '' ||
+				this.book.title.trim() === '' ||
 				this.book.pages <= 0 ||
 				this.book.pages === undefined ||
 				this.book.authorId <= -1
@@ -120,3 +120,66 @@ export default {
 	},
 };
 </script>
+
+<style scoped>
+div h1 {
+	text-align: center;
+}
+
+form {
+	min-width: 300px;
+	max-width: 500px;
+	padding: 10px 20px;
+	background-color: #e6e2dd;
+	margin: 10px auto;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+input {
+	display: block;
+	margin-bottom: 8px;
+	padding: 10px;
+}
+
+input,
+select {
+	background: #f7f7f7;
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	margin-bottom: 30px;
+}
+
+select {
+	-webkit-appearance: menulist-button;
+	height: 35px;
+}
+
+.button {
+	display: block;
+	padding: 15px;
+	color: #fff;
+	margin: 0 auto;
+	background-color: #274c6b;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.button:hover {
+	background-color: #163b5a;
+}
+</style>

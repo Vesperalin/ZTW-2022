@@ -1,5 +1,6 @@
 <template>
 	<div class="table-wrapper">
+		<h1>Books</h1>
 		<table>
 			<thead>
 				<tr>
@@ -47,7 +48,7 @@
 				})
 			"
 		>
-			Add Author
+			Add Book
 		</button>
 		<p v-if="error" class="error-message">Couldn't load data from server</p>
 	</div>
@@ -129,6 +130,10 @@ export default {
 <style scoped>
 .table-wrapper {
 	text-align: center;
+}
+
+.table-wrapper h1 {
+	margin-bottom: 10px;
 }
 
 th {

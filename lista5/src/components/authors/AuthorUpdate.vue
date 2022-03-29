@@ -21,14 +21,17 @@
 					@focus="clearStatus"
 					@keypress="clearStatus"
 				/>
-				<button>Edit author</button>
+				<button class="button">Edit author</button>
+				<p v-if="success" class="success-message">
+					Successfully updated the author
+				</p>
+				<p v-if="error && submitting" class="error-message">
+					Please fill the form correctly
+				</p>
+				<p v-if="errorWithServer" class="error-message">
+					{{ this.errorMessage }}
+				</p>
 			</form>
-			<p v-if="error && submitting" class="error-message">
-				Please fill the form
-			</p>
-			<p v-if="errorWithServer" class="error-message">
-				Couldn't load data from server
-			</p>
 		</div>
 	</div>
 </template>
@@ -38,7 +41,10 @@ export default {
 	name: 'author-update',
 	computed: {
 		invalidAuthor() {
-			return this.author.firstName === '' && this.author.lastName === '';
+			return (
+				this.author.firstName.trim() === '' &&
+				this.author.lastName.trim() === ''
+			);
 		},
 	},
 	data() {
@@ -46,6 +52,7 @@ export default {
 			submitting: false,
 			error: false,
 			errorWithServer: false,
+			success: false,
 			author: {
 				id: -1,
 				firstName: '',
@@ -86,17 +93,27 @@ export default {
 					method: 'PUT',
 					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 					body: new URLSearchParams(author),
-				});
-				this.$router.push({
-					name: 'authors',
-				});
+				})
+					.then(response => {
+						if (!response.ok) {
+							this.success = false;
+							throw response;
+						}
+						this.success = true;
+					})
+					.catch(error => {
+						this.error = true;
+						this.errorMessage = error.message;
+						console.error(error);
+					});
 			} catch (error) {
-				this.errorWithServer = true;
-				console.error(error);
+				this.error = true;
+				this.errorMessage = error.message;
 			}
 		},
 		clearStatus() {
 			this.error = false;
+			this.success = false;
 		},
 	},
 	mounted() {
@@ -104,3 +121,64 @@ export default {
 	},
 };
 </script>
+
+<style scoped>
+div h1 {
+	text-align: center;
+}
+form {
+	min-width: 300px;
+	max-width: 500px;
+	padding: 10px 20px;
+	background-color: #e6e2dd;
+	margin: 10px auto;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+input {
+	display: block;
+	margin-bottom: 8px;
+}
+
+input,
+select {
+	background: #f7f7f7;
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	margin-bottom: 30px;
+}
+
+select {
+	-webkit-appearance: menulist-button;
+	height: 35px;
+}
+
+.button {
+	display: block;
+	padding: 15px;
+	color: #fff;
+	margin: 0 auto;
+	background-color: #207744;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.button:hover {
+	background-color: #106633;
+}
+</style>

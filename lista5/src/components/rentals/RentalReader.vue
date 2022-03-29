@@ -1,5 +1,8 @@
 <template>
 	<div class="table-wrapper">
+		<h1>
+			{{ this.reader.firstName + ' ' + this.reader.lastName + "'s" }} rentals
+		</h1>
 		<table>
 			<thead>
 				<tr>
@@ -104,6 +107,10 @@ export default {
 	text-align: center;
 }
 
+.table-wrapper h1 {
+	margin-bottom: 10px;
+}
+
 th {
 	font-size: 1.2rem;
 	padding-bottom: 10px;
@@ -133,7 +140,7 @@ td {
 button {
 	padding: 10px 15px;
 	margin: 0 5px;
-	background-color: #274c6b;
+	background-color: #9e2e82;
 	color: #f7f7f7;
 	border-radius: 10px;
 	font-size: 0.95rem;
@@ -141,6 +148,6 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: #163b5a;
+	background-color: #8d1d71;
 }
 </style>

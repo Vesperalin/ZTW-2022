@@ -1,14 +1,17 @@
 <template>
-	<div class="panel-wrapper">
-		<p class="title">Title</p>
-		<p>{{ book.title }}</p>
-		<p class="title separator">Pages</p>
-		<p>{{ book.pages }}</p>
-		<p class="title separator">Author</p>
-		<p>{{ book.authorName + ' ' + book.authorSurname }}</p>
-		<p v-if="errorWithServer" class="error-message separator">
-			Couldn't load data from server
-		</p>
+	<div>
+		<h1>Preview</h1>
+		<div class="panel-wrapper">
+			<p class="title">Title</p>
+			<p>{{ book.title }}</p>
+			<p class="title separator">Pages</p>
+			<p>{{ book.pages }}</p>
+			<p class="title separator">Author</p>
+			<p>{{ book.authorName + ' ' + book.authorSurname }}</p>
+			<p v-if="errorWithServer" class="error-message separator">
+				Couldn't load data from server
+			</p>
+		</div>
 	</div>
 </template>
 
@@ -62,7 +65,13 @@ export default {
 </script>
 
 <style scoped>
+div h1 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
 .panel-wrapper {
+	min-width: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

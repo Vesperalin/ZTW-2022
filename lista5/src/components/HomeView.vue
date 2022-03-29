@@ -1,104 +1,126 @@
 <template>
 	<div class="home">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed odio
-			tristique, suscipit sapien eu, aliquam urna. Curabitur porttitor venenatis
-			tellus, ac porta nisi pretium non. In blandit, massa eu placerat mattis,
-			nibh ante placerat nulla, quis tincidunt odio risus eu arcu. In tristique
-			ante fermentum massa faucibus efficitur. Morbi faucibus eros posuere eros
-			pharetra finibus. Integer vulputate at purus sed ultrices. Aliquam sodales
-			sed diam sed aliquam. Class aptent taciti sociosqu ad litora torquent per
-			conubia nostra, per inceptos himenaeos. Mauris vel ante bibendum, faucibus
-			quam vel, rutrum velit. Nulla bibendum vitae ligula ac dignissim. In
-			tellus turpis, tincidunt id rutrum at, tempus eu arcu. Nunc vitae orci
-			felis. Sed quis nulla viverra, bibendum mauris sed, rutrum diam. Nullam a
-			volutpat dui, in accumsan dui. Cras volutpat vestibulum faucibus. Nullam
-			mattis sapien nec faucibus ultrices. Quisque nisi arcu, vestibulum sed
-			tempor ut, viverra eget nisi. Maecenas vehicula massa sapien, sit amet
-			mollis ipsum laoreet sit amet. Proin a efficitur ex. Praesent sed maximus
-			eros. Praesent est velit, placerat cursus posuere sed, dignissim vel diam.
-			Aenean a justo volutpat, maximus diam consectetur, auctor nulla. Sed nec
-			dictum ligula, eget lacinia neque. Suspendisse ultricies dignissim urna ac
-			elementum. Maecenas mattis neque massa, vel placerat risus eleifend eget.
-			Integer mattis condimentum augue at fermentum. Duis at quam id massa
-			sollicitudin vulputate. Donec in elit eget nulla volutpat eleifend quis at
-			turpis. Fusce lacinia ante nec massa bibendum tempus. Nulla fringilla, sem
-			sit amet iaculis facilisis, felis massa porta velit, ac malesuada leo
-			libero at massa. Pellentesque at eros eget felis tempor lacinia non non
-			libero. Morbi eget felis augue. Pellentesque vitae risus urna. In eleifend
-			tempus quam, a luctus neque. Donec a lorem porttitor, mollis nisl sed,
-			porta nulla. Fusce faucibus, ante at molestie sodales, nunc lacus lacinia
-			nulla, semper condimentum urna diam non neque. Curabitur suscipit orci nec
-			libero placerat hendrerit. Mauris malesuada suscipit suscipit. Quisque
-			egestas tincidunt malesuada. Suspendisse semper efficitur massa, non
-			iaculis ex fermentum sed. Aenean id ultricies erat, consequat ornare nunc.
-			Aenean posuere dictum elit ac faucibus. Nulla tortor sem, vehicula et sem
-			vel, dignissim tincidunt quam. Class aptent taciti sociosqu ad litora
-			torquent per conubia nostra, per inceptos himenaeos. Donec pharetra diam
-			vel ante sagittis auctor. Aliquam mattis tortor non suscipit maximus.
-			Nulla dapibus turpis et ligula efficitur eleifend et sed lorem. Donec sed
-			felis mollis, sodales nisi in, posuere nisl. Ut cursus orci eu dolor
-			convallis semper. Ut orci ipsum, auctor id arcu vel, consequat consequat
-			nunc. Donec sodales, enim vel rutrum malesuada, erat ipsum tincidunt
-			tortor, ut elementum ligula elit vitae neque. Donec luctus dui dui, non
-			viverra justo scelerisque id. Duis condimentum a elit non tincidunt. Morbi
-			venenatis, dolor ac egestas mattis, ipsum neque maximus quam, vitae
-			consectetur velit magna eu turpis. Curabitur quis nisl eu massa blandit
-			viverra vitae vel dolor. Donec vitae sollicitudin nibh, ac iaculis erat.
-			Proin et sem nulla. Vivamus in purus et dolor finibus volutpat. Vestibulum
-			ac sem felis. Praesent iaculis hendrerit vestibulum. Mauris ultricies
-			lacinia ultricies. Maecenas ut felis nibh. Orci varius natoque penatibus
-			et magnis dis parturient montes, nascetur ridiculus mus. Quisque quis
-			massa suscipit, viverra eros mollis, efficitur nunc. Quisque sit amet sem
-			non quam mattis luctus quis vel massa. Suspendisse lacus augue, sagittis
-			non pellentesque a, tincidunt sit amet orci. In a purus at massa pulvinar
-			feugiat. Nulla lorem odio, blandit sit amet malesuada porta, consectetur
-			sit amet felis. Donec tristique, libero eget viverra suscipit, enim turpis
-			accumsan nunc, id pellentesque ex mauris eu enim. Vivamus ultrices ornare
-			tristique. Phasellus gravida odio a nunc dapibus, dapibus molestie dui
-			pretium. Phasellus in erat non turpis mattis porta a et lacus. Nulla elit
-			orci, varius a blandit a, consequat id diam. Aenean a dignissim quam, ac
-			sollicitudin arcu. Phasellus id ullamcorper tellus. Morbi enim ipsum,
-			scelerisque aliquet efficitur sit amet, tristique ut nisl. Quisque porta
-			velit eget tellus tristique mollis. Nulla venenatis mattis quam, eget
-			varius libero mattis vitae. Nunc id euismod orci. Praesent a felis quis
-			leo tincidunt molestie in eget lacus. Sed non orci leo. Maecenas hendrerit
-			ipsum at suscipit faucibus. Curabitur eu ligula laoreet, dictum ligula
-			quis, rutrum felis. Ut convallis turpis risus. Pellentesque vitae varius
-			ex, sed aliquet massa. Aliquam a quam vitae libero congue interdum. Nulla
-			id odio eu risus semper venenatis. Integer ac orci blandit turpis suscipit
-			varius. Phasellus gravida odio a nunc dapibus, dapibus molestie dui
-			pretium. Phasellus in erat non turpis mattis porta a et lacus. Nulla elit
-			orci, varius a blandit a, consequat id diam. Aenean a dignissim quam, ac
-			sollicitudin arcu. Phasellus id ullamcorper tellus. Morbi enim ipsum,
-			scelerisque aliquet efficitur sit amet, tristique ut nisl. Quisque porta
-			velit eget tellus tristique mollis. Nulla venenatis mattis quam, eget
-			varius libero mattis vitae. Nunc id euismod orci. Praesent a felis quis
-			leo tincidunt molestie in eget lacus. Sed non orci leo. Maecenas hendrerit
-			ipsum at suscipit faucibus. Curabitur eu ligula laoreet, dictum ligula
-			quis, rutrum felis. Ut convallis turpis risus. Pellentesque vitae varius
-			ex, sed aliquet massa. Aliquam a quam vitae libero congue interdum. Nulla
-			id odio eu risus semper venenatis. Integer ac orci blandit turpis suscipit
-			varius. Phasellus gravida odio a nunc dapibus, dapibus molestie dui
-			pretium. Phasellus in erat non turpis mattis porta a et lacus. Nulla elit
-			orci, varius a blandit a, consequat id diam. Aenean a dignissim quam, ac
-			sollicitudin arcu. Phasellus id ullamcorper tellus. Morbi enim ipsum,
-			scelerisque aliquet efficitur sit amet, tristique ut nisl. Quisque porta
-			velit eget tellus tristique mollis. Nulla venenatis mattis quam, eget
-			varius libero mattis vitae. Nunc id euismod orci. Praesent a felis quis
-			leo tincidunt molestie in eget lacus. Sed non orci leo. Maecenas hendrerit
-			ipsum at suscipit faucibus. Curabitur eu ligula laoreet, dictum ligula
-			quis, rutrum felis. Ut convallis turpis risus. Pellentesque vitae varius
-			ex, sed aliquet massa. Aliquam a quam vitae libero congue interdum. Nulla
-			id odio eu risus semper venenatis. Integer ac orci blandit turpis suscipit
-			varius.
-		</p>
+		<img :src="image" />
+		<div class="main-text-wrapper">
+			<h1>Bookery</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+				ullamcorper blandit nulla at ornare. Quisque semper orci eget felis
+				mattis, vel elementum ante posuere. Maecenas feugiat imperdiet sagittis.
+				In hac habitasse platea dictumst. Donec quis orci lacinia, blandit ex
+				eget, rhoncus elit. Praesent gravida quam non mauris fermentum, eu
+				mattis ligula viverra. Nullam id facilisis sem. Cras pellentesque, augue
+				in luctus euismod, quam ante tristique magna, ac placerat purus magna
+				non sapien. Morbi aliquet mauris vel enim pharetra aliquet. Donec ut
+				ornare ipsum. Curabitur justo augue, malesuada ultricies elementum sed,
+				ullamcorper in nisl. Curabitur varius magna et nisi blandit, vitae
+				faucibus purus pretium. Nunc consequat nibh nec ante rhoncus semper.
+				Vestibulum convallis enim vel odio bibendum lacinia. Donec orci ante,
+				elementum quis sollicitudin vel, malesuada non diam. Integer vehicula
+				nunc at turpis gravida, et eleifend ligula volutpat. Ut a leo sagittis
+				erat ullamcorper pulvinar. Etiam id gravida massa. Nam bibendum faucibus
+				metus, ut bibendum quam iaculis at. Mauris enim orci, lobortis in
+				gravida a, aliquet et diam. Donec sit amet fringilla ex. Ut luctus
+				facilisis mi, quis vulputate quam luctus eu. Donec eu metus neque.
+				Pellentesque vestibulum sapien tincidunt, laoreet augue vel, ornare
+				lorem. Etiam venenatis quam at leo ornare, a mollis sem auctor. In
+				tincidunt pellentesque dolor, eu bibendum lectus volutpat id. In hac
+				habitasse platea dictumst. Mauris congue leo in sapien convallis, a
+				auctor nisl lobortis. Donec et sem ac dui iaculis pellentesque nec eget
+				eros. Sed tristique sapien ut lectus sollicitudin vehicula. Ut gravida
+				vitae neque eget sodales. Nulla iaculis consequat libero ac consectetur.
+				Nam id hendrerit neque. Curabitur nec est consequat, rutrum neque a,
+				dictum tortor. Sed eget sapien finibus, faucibus magna ut, convallis
+				massa. Cras at sagittis purus. Integer in arcu dolor. Suspendisse nisi
+				libero, consectetur sit amet leo eu, fermentum tincidunt lectus. Integer
+				eu aliquet augue, id mattis libero. Cras ante augue, gravida id elit
+				vitae, blandit aliquam sapien. Nunc eget placerat sem. Quisque molestie
+				aliquet imperdiet. Suspendisse non turpis at lacus posuere placerat
+				vitae sed purus. In tincidunt non metus porta placerat. Fusce elementum,
+				arcu sit amet viverra tincidunt, massa ante condimentum urna, in posuere
+				tortor tellus sed eros. Curabitur ut mauris quis magna fermentum
+				hendrerit ac eu elit. Nunc mattis dictum risus, non congue arcu pharetra
+				nec. Donec risus enim, rhoncus id tincidunt id, porta eget nunc. Duis
+				sit amet enim justo. Nullam venenatis nisi sit amet tortor faucibus, sed
+				pulvinar leo viverra. Vivamus nec faucibus eros, et luctus purus.
+			</p>
+			<br />
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+				ullamcorper blandit nulla at ornare. Quisque semper orci eget felis
+				mattis, vel elementum ante posuere. Maecenas feugiat imperdiet sagittis.
+				In hac habitasse platea dictumst. Donec quis orci lacinia, blandit ex
+				eget, rhoncus elit. Praesent gravida quam non mauris fermentum, eu
+				mattis ligula viverra. Nullam id facilisis sem. Cras pellentesque, augue
+				in luctus euismod, quam ante tristique magna, ac placerat purus magna
+				non sapien. Morbi aliquet mauris vel enim pharetra aliquet. Donec ut
+				ornare ipsum. Curabitur justo augue, malesuada ultricies elementum sed,
+				ullamcorper in nisl. Curabitur varius magna et nisi blandit, vitae
+				faucibus purus pretium. Nunc consequat nibh nec ante rhoncus semper.
+				Vestibulum convallis enim vel odio bibendum lacinia. Donec orci ante,
+				elementum quis sollicitudin vel, malesuada non diam. Integer vehicula
+				nunc at turpis gravida, et eleifend ligula volutpat. Ut a leo sagittis
+				erat ullamcorper pulvinar. Etiam id gravida massa. Nam bibendum faucibus
+				metus, ut bibendum quam iaculis at. Mauris enim orci, lobortis in
+				gravida a, aliquet et diam. Donec sit amet fringilla ex. Ut luctus
+				facilisis mi, quis vulputate quam luctus eu. Donec eu metus neque.
+				Pellentesque vestibulum sapien tincidunt, laoreet augue vel, ornare
+				lorem. Etiam venenatis quam at leo ornare, a mollis sem auctor. In
+				tincidunt pellentesque dolor, eu bibendum lectus volutpat id. In hac
+				habitasse platea dictumst. Mauris congue leo in sapien convallis, a
+				auctor nisl lobortis. Donec et sem ac dui iaculis pellentesque nec eget
+				eros. Sed tristique sapien ut lectus sollicitudin vehicula. Ut gravida
+				vitae neque eget sodales. Nulla iaculis consequat libero ac consectetur.
+				Nam id hendrerit neque. Curabitur nec est consequat, rutrum neque a,
+				dictum tortor. Sed eget sapien finibus, faucibus magna ut, convallis
+				massa. Cras at sagittis purus. Integer in arcu dolor. Suspendisse nisi
+				libero, consectetur sit amet leo eu, fermentum tincidunt lectus. Integer
+				eu aliquet augue, id mattis libero. Cras ante augue, gravida id elit
+				vitae, blandit aliquam sapien. Nunc eget placerat sem. Quisque molestie
+				aliquet imperdiet. Suspendisse non turpis at lacus posuere placerat
+				vitae sed purus. In tincidunt non metus porta placerat. Fusce elementum,
+				arcu sit amet viverra tincidunt, massa ante condimentum urna, in posuere
+				tortor tellus sed eros. Curabitur ut mauris quis magna fermentum
+				hendrerit ac eu elit. Nunc mattis dictum risus, non congue arcu pharetra
+				nec. Donec risus enim, rhoncus id tincidunt id, porta eget nunc. Duis
+				sit amet enim justo. Nullam venenatis nisi sit amet tortor faucibus, sed
+				pulvinar leo viverra. Vivamus nec faucibus eros, et luctus purus.
+			</p>
+		</div>
 	</div>
 </template>
 
 <script>
+import image from '../assets/logo.jpg';
+
 export default {
 	name: 'HomeView',
 	components: {},
+	data() {
+		return {
+			image: image,
+		};
+	},
 };
 </script>
+
+<style scoped>
+img {
+	display: block;
+	margin-top: -260px;
+	width: 100%;
+}
+
+.main-text-wrapper {
+	margin: 20px 50px;
+}
+
+.main-text-wrapper h1 {
+	margin-bottom: 15px;
+	font-size: 2.2rem;
+}
+
+.main-text-wrapper p {
+	line-height: 1.5;
+}
+</style>
