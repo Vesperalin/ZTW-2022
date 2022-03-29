@@ -90,6 +90,7 @@ export default {
 					)[0];
 					this.mergedBooksAndAuthors.push({
 						id: this.books[i].id,
+						authorId: author.id,
 						title: this.books[i].title,
 						pages: this.books[i].pages,
 						authorFirstName: author.firstName,

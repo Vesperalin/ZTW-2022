@@ -25,7 +25,7 @@ const routes = [
 	{
 		path: '/books/book/:id',
 		name: 'book-book',
-		component: () => import('@/components/authors/AuthorPreview.vue'),
+		component: () => import('@/components/books/BookPreview.vue'),
 	},
 	{
 		path: '/authors',

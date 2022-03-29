@@ -41,7 +41,7 @@ export default {
 	name: 'author-form',
 	computed: {
 		invalidAuthor() {
-			return this.author.firstName === '' && this.author.lastName === '';
+			return this.author.firstName === '' || this.author.lastName === '';
 		},
 	},
 	data() {

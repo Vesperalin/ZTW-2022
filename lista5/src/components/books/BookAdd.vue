@@ -49,8 +49,9 @@ export default {
 	computed: {
 		invalidBook() {
 			return (
-				this.book.title === '' &&
-				this.book.pages <= 0 &&
+				this.book.title === '' ||
+				this.book.pages <= 0 ||
+				this.book.pages === undefined ||
 				this.book.authorId <= -1
 			);
 		},
