@@ -27,7 +27,6 @@
 						{{ author.firstName + ' ' + author.lastName }}
 					</option>
 				</select>
-
 				<button>Add author</button>
 				<p v-if="error && submitting" class="error-message">
 					Please fill the form
@@ -115,6 +114,10 @@ export default {
 				this.success = true;
 				this.submitting = false;
 				this.errorWithServer = false;
+
+				this.$router.push({
+					name: 'books',
+				});
 			} catch (error) {
 				this.errorWithServer = true;
 				console.error(error);
