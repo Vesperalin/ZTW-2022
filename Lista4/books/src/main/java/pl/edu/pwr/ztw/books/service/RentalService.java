@@ -3,7 +3,6 @@ package pl.edu.pwr.ztw.books.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.pwr.ztw.books.model.Book;
-import pl.edu.pwr.ztw.books.model.Reader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +10,7 @@ import java.util.Map;
 
 @Service
 public class RentalService implements IRentalService {
-    private static final HashMap<Reader, ArrayList<Book>> rentalsRepo = new HashMap<>();
+    private static final HashMap<Integer, ArrayList<Book>> rentalsRepo = new HashMap<>();
 
     @Autowired
     BookService bookService;
@@ -19,19 +18,18 @@ public class RentalService implements IRentalService {
     ReaderService readerService;
 
     @Override
-    public Map<Reader, ArrayList<Book>> getRentalsRepo() {
+    public Map<Integer, ArrayList<Book>> getRentalsRepo() {
         return rentalsRepo;
     }
 
     @Override
     public Book rentBook(int readerId, int bookId) {
         Book bookToRent = bookService.getBook(bookId);
-        Reader reader = readerService.getReader(readerId);
-        if (bookToRent != null && reader != null) {
+        if (bookToRent != null) {
             if (isRented(bookToRent)) {
                 return null;
             } else {
-                rentalsRepo.computeIfAbsent(reader, k -> new ArrayList<>()).add(bookToRent);
+                rentalsRepo.computeIfAbsent(readerId, k -> new ArrayList<>()).add(bookToRent);
             }
         }
         return bookToRent;
@@ -71,7 +69,6 @@ public class RentalService implements IRentalService {
 
     @Override
     public ArrayList<Book> getRentedBooks(int readerId) {
-        Reader reader = readerService.getReader(readerId);
-        return rentalsRepo.get(reader);
+        return rentalsRepo.get(readerId);
     }
 }

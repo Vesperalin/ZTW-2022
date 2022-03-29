@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public interface IRentalService {
-    Map<Reader, ArrayList<Book>> getRentalsRepo();
+    Map<Integer, ArrayList<Book>> getRentalsRepo();
 
     Book rentBook(int readerId, int bookId);
 
