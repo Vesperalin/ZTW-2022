@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Edit book</h1>
 		<div>
 			<form @submit.prevent="updateBook">
@@ -39,6 +39,7 @@
 				</p>
 			</form>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -136,6 +137,9 @@ export default {
 			this.success = false;
 			this.error = false;
 		},
+		getBack() {
+			this.$router.push('/books');
+		},
 	},
 	mounted() {
 		this.getBookAuthors();
@@ -144,6 +148,24 @@ export default {
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #274c6b;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #163b5a;
+}
+
 div h1 {
 	text-align: center;
 }

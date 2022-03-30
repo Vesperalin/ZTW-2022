@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Preview</h1>
 		<div class="panel-wrapper">
 			<p class="title">First Name</p>
@@ -10,6 +10,7 @@
 				Couldn't load data from server
 			</p>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -42,6 +43,9 @@ export default {
 				console.error(error);
 			}
 		},
+		getBack() {
+			this.$router.push('/readers');
+		},
 	},
 	mounted() {
 		this.getReader();
@@ -50,6 +54,24 @@ export default {
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #dbcf26;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #cabe15;
+}
+
 div h1 {
 	margin-bottom: 10px;
 	text-align: center;

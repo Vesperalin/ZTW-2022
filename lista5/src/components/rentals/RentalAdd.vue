@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Rent a book</h1>
 		<div>
 			<form @submit.prevent="rentBook">
@@ -36,6 +36,7 @@
 				<p v-if="error" class="error-message">{{ this.errorMessage }}</p>
 			</form>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -142,12 +143,14 @@ export default {
 				this.errorWithServer = true;
 				this.errorMessage = error.message;
 				console.error(error);
-				console.log('dasdas');
 			}
 		},
 		clearStatus() {
 			this.success = false;
 			this.error = false;
+		},
+		getBack() {
+			this.$router.push('/rentals');
 		},
 	},
 	mounted() {
@@ -157,6 +160,24 @@ export default {
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #9e2e82;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #8d1d71;
+}
+
 div h1 {
 	text-align: center;
 }

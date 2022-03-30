@@ -24,6 +24,7 @@
 			</tbody>
 		</table>
 		<p v-if="error" class="error-message">Couldn't load data from server</p>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -95,6 +96,9 @@ export default {
 					console.log(error);
 				});
 		},
+		getBack() {
+			this.$router.push('/rentals');
+		},
 	},
 	mounted() {
 		this.getRentals();
@@ -103,6 +107,19 @@ export default {
 </script>
 
 <style scoped>
+.back-button {
+	padding: 10px 15px;
+	background-color: #9e2e82;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #8d1d71;
+}
+
 .table-wrapper {
 	text-align: center;
 }

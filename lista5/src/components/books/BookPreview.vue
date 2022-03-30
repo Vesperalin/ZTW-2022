@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Preview</h1>
 		<div class="panel-wrapper">
 			<p class="title">Title</p>
@@ -12,6 +12,7 @@
 				Couldn't load data from server
 			</p>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -57,6 +58,9 @@ export default {
 				console.error(error);
 			}
 		},
+		getBack() {
+			this.$router.push('/books');
+		},
 	},
 	mounted() {
 		this.getBookAndAuthor();
@@ -65,6 +69,24 @@ export default {
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #274c6b;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #163b5a;
+}
+
 div h1 {
 	text-align: center;
 	margin-bottom: 10px;

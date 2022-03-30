@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Add reader</h1>
 		<div>
 			<form @submit.prevent="addReader(reader)">
@@ -33,6 +33,7 @@
 				</p>
 			</form>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -92,11 +93,32 @@ export default {
 			this.success = false;
 			this.error = false;
 		},
+		getBack() {
+			this.$router.push('/readers');
+		},
 	},
 };
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #dbcf26;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #cabe15;
+}
+
 div h1 {
 	text-align: center;
 }

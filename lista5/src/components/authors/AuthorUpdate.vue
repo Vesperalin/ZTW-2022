@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Edit author</h1>
 		<div id="author-form">
 			<form @submit.prevent="updateAuthor(author)">
@@ -33,6 +33,7 @@
 				</p>
 			</form>
 		</div>
+		<button class="back-button" @click="getBack()">&larr; Back</button>
 	</div>
 </template>
 
@@ -76,7 +77,9 @@ export default {
 				console.error(error);
 			}
 		},
-
+		getBack() {
+			this.$router.push('/authors');
+		},
 		async updateAuthor(author) {
 			this.submitting = true;
 			this.clearStatus();
@@ -123,6 +126,24 @@ export default {
 </script>
 
 <style scoped>
+.content {
+	text-align: center;
+}
+
+.back-button {
+	padding: 10px 15px;
+	margin: 10px;
+	background-color: #207744;
+	color: #f7f7f7;
+	border-radius: 10px;
+	font-size: 0.75rem;
+}
+
+.back-button:hover {
+	cursor: pointer;
+	background-color: #106633;
+}
+
 div h1 {
 	text-align: center;
 }
